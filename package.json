@@ -1,0 +1,21 @@
+{
+    "name": "rool",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "jasmine"
+    },
+    "devDependencies": {
+        "jasmine": "^2.4.1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/marlun78/rool.git"
+    },
+    "bugs": {
+        "url": "https://github.com/marlun78/rool/issues"
+    },
+    "homepage": "https://github.com/marlun78/rool#readme",
+    "author": "Martin Eneqvist",
+    "license": "MIT"
+}

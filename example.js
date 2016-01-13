@@ -26,13 +26,12 @@ Rool.defaults({
 var translationsStore = Rool.create('translations-store', {
     storage: ['idb'],
     transport: ['ajax'],
-    refresh: 60,
     ajax: {
         url: 'https://example.com/translations.json'
     }
 });
 // The store is lazy, so you must call fetch-method explicitly if you wish to fetch the data immediately.
-translationsStore.fetch();
+translationsStore.fetch(aditionalParams);
 
 // Listen to changes in the store by subscribing to the data event.
 translationsStore.on('data', onData).on('error', onError);
@@ -45,6 +44,9 @@ function onError(error) {
 
 // Stop listen to changes in the store
 translationsStore.off('data', onData).off('error', onError);
+
+// Empty the store
+translationsStore.clear();
 
 // Clear out all event listeners and removes the data from the local store.
 translationsStore.dispose(); // or Rool.dispose('translations');
